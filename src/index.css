@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+
+@layer components {
+  .form-input {
+    @apply border-b border-gray-300 rounded-b-md w-full p-2 text-xs outline-none placeholder-gray-600;
+    border-bottom-width: 1px; 
+  }
+}
+
+@tailwind utilities;
+
+@layer utilities {
+  .peer:not(:placeholder-shown) ~ .peer-not-placeholder-shown {
+    @apply opacity-100 -top-5;
+  }
+  .peer:placeholder-shown ~ .peer-not-placeholder-shown {
+    @apply opacity-0 top-3;
+  }  
+  
+}
